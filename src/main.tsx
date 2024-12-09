@@ -1,10 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+// src/index.tsx
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css"; // This imports the Tailwind styles
+import Nav from "./components/Nav";
+import App from "./App";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+const rootElement = document.getElementById("root")!;
+const root = ReactDOM.createRoot(rootElement);
+
+root.render(
+  <React.StrictMode>
+    <Nav />
     <App />
-  </StrictMode>,
-)
+  </React.StrictMode>
+);
